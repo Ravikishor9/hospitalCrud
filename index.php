@@ -68,7 +68,7 @@ if(session_status() === PHP_SESSION_ACTIVE){
 
         <th>IP No</th>
 
-        <th>Date of Join</th>
+        <th>Date of Join***</th>
 
         
     </tr>
