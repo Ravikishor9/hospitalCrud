@@ -16,86 +16,58 @@
     header("Location:index.php");
     }
 ?>
-<html>
+<!DOCTYPE html>
 <head>
-<title>User Login</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<style>
-    html,body { 
-	height: 100%; 
-}
+<meta charset="ISO-8859-1">
+<title>AINU</title>
+<link href="loginluv.css" rel="stylesheet" type="text/css">
 
-.global-container{
-	height:100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #f5f5f5;
-}
-
-form{
-	padding-top: 10px;
-	font-size: 14px;
-	margin-top: 30px;
-}
-
-.card-title{ font-weight:300; }
-
-.btn{
-	font-size: 14px;
-	margin-top:20px;
-}
-
-
-.login-form{ 
-	width:330px;
-	margin:20px;
-}
-
-.sign-up{
-	text-align:center;
-	padding:20px 0 0;
-}
-
-.alert{
-	margin-bottom:-30px;
-	font-size: 13px;
-	margin-top:20px;
-}
-</style>
 </head>
+
 <body>
-<div class="message"><?php if($message!="") { echo $message; } ?></div>
-<div class="global-container">
-	<div class="card login-form">
-	<div class="card-body">
-		<h3 class="card-title text-center">Login</h3>
-		<div class="card-text">
-			<!--
-			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-			<form name="frmUser" method="post" action="">
-				<!-- to error: add class "has-danger" -->
-				<div class="form-group">
-					<label for="exampleInputEmail1">Email address</label>
-					<input type="text" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" name="user_name">
+
+	<div class="main_div">
+
+	  	<h4><font size="15" color="#804000"></font></h4>	
+	  	
+	  	</div>
+<div class="contenido">		
+
+<div class="login">
+<ul class="backgroundslider">
+	<li></li>
+	<li></li>
+	<li></li>
+	</ul>
+<form action="" method="POST">
+
+<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="images/ainu.png" class="brand_logo" alt="Logo" >
+					</div>
 				</div>
-				<div class="form-group">
-					<label for="exampleInputPassword1">Password</label>
-					<a href="#" style="float:right;font-size:12px;">Forgot password?</a>
-					<input type="password" class="form-control form-control-sm" id="exampleInputPassword1" name="password">
-				</div>
-				<button type="submit" class="btn btn-primary btn-block" name="submit" value="Submit">Sign in</button>
+				<br/>
+				<br/>
 				
-				<div class="sign-up">
-					Don't have an account? <a href="#">Create One</a>
-				</div>
-			</form>
-		</div>
-	</div>
+				<h1>LOGIN</h1>
+				<center><p style="color:black">Please sign in to get access</P></center>
+				<br/>
+				<br/>
+				
+<center><input type="username" name="user_name" id="username" placeholder="USER NAME" required></center><br>
+<center><input type="password" name="password" id="password" placeholder="PASSWORD" required></center><br>
+<center><input type="submit" name="submit" id="submit"></center><br><br></br>
+<!-- <a href="regat1.html"><font size="4" color="#F8F8FF">New User Register</a> -->	<br>
+
+<div class="container" style="margin-top:150px;text-align:center;font-style:italic" color="#8000ff">
+<p><font size="">ABDUL RAZAK</font></p>
 </div>
+
+</form>
+
 </div>
+
+</div>
+	
 </body>
 </html>

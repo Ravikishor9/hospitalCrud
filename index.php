@@ -33,11 +33,75 @@ if(session_status() === PHP_SESSION_ACTIVE){
 </head>
 <body>
 
+
+<?php $result = mysqli_query($con, "SELECT * FROM patient_details");?>
+
+<form method="post" action=" ">
+    <div class="container">
+
+    <div class="float-right">
+            <a href="logout.php" class="btn btn-primary">Logout</a>
+        </div>
 <div class="container mt-5">
-    <?php 
-    // Show the appropriate button based on login status
-    if($loggedIn) {
-        echo '<a href="logout.php" class="btn btn-primary">Logout</a>';
+    
+<table class="table table-hover  table-bordered mt-3">
+<a href="finalforms.php" class="btn btn-primary">Create New </a>     
+     
+    <thead >
+        <tr  class ="danger">
+       
+        <th >Room ID</th>
+
+        <th>Picture</th>
+
+        <th>Patient Name</th>
+
+        <th>Age</th>
+
+        <th>Gender</th>
+
+        <th>Consultant</th>
+
+        <th>Cash/Insurance</th>
+        
+        <th>Attender No</th>
+
+        <th>IP No</th>
+
+        <th>Date of Join</th>
+
+        
+    </tr>
+</thead>
+<tbody >
+    <?php
+    if(mysqli_num_rows($result)>0){
+        while($row=mysqli_fetch_assoc($result)){
+            echo '<tr class = "info" >';
+           
+            echo '<td>'.$row['room_id'].'</td>';
+            echo '<td><img src="images/'.$row['image'].'" width="50" height="50"></td>';
+            echo '<td>'.$row['name'].'</td>';
+            echo '<td>'.$row['age'].'</td>';
+            echo '<td>'.$row['gender'].'</td>';
+            echo '<td>'.$row['consultant'].'</td>';
+            echo '<td>'.$row['cash_insurance'].'</td>';
+            echo '<td>'.$row['attender_no'].'</td>';
+            echo '<td>'.$row['ip_no'].'</td>';
+            echo '<td>'.$row['date_of_join'].'</td>';
+            
+            
+            
+            echo " <td class='text-center' > <a href='edit.php?id=".$row['id']."' class='btn btn-primary'><i class='bi bi-pencil'></i> Edit</a> </td>";
+          
+            echo " <td  class='text-center'>  <a href='delete.php?id=".$row['id']."' class='btn btn-danger' onclick='return confirm(\"Are you sure?\")'> <i class='bi bi-trash'></i> DELETE</a> </td>";
+            
+            
+             '</tr>';
+        
+            
+        }
+       
     } else {
         echo '<a href="login.php" class="btn btn-primary">Login</a>';
     }

@@ -20,12 +20,12 @@ if(isset($_POST['submit'] ))
     
    
     $rs=mysqli_query($con,$sql);
-    move_uploaded_file($_FILES['Photo']['tmp_name'], 'files/' . $Photo);
+    move_uploaded_file($_FILES['Photo']['tmp_name'], 'images/' . $Photo);
     if( $rs)
 {
 
     echo "Data entered successfully";
-    header('location:/finalform2/table.php');
+    header('location:index.php');
     
     exit;
 
@@ -56,37 +56,37 @@ mysqli_close($con);
         <div class="form-row space">
         <div class="col-md-4 mb-3">
             <label for="validationDefault01">Room ID</label>
-            <input name='room_id' type="number" class="form-control" id="validationDefault01" placeholder="000" required>
+            <input name='room_id' type="number" class="form-control" id="validationDefault01" placeholder="000" >
           </div>
           <div class="col-md-4 mb-3">
             <label for="validationDefault01">Patient Name</label>
-            <input name='name'type="text" class="form-control" id="validationDefault01" placeholder="First name" required>
+            <input name='name'type="text" class="form-control" id="validationDefault01" placeholder="First name">
           </div>
           <div class="col-md-4 mb-3">
             <label for="validationDefault01">IP Number</label>
-            <input name='ip_no'type="number" class="form-control" id="validationDefault01" placeholder="000000" required>
+            <input name='ip_no'type="number" class="form-control" id="validationDefault01" placeholder="000000" >
           </div>
           
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
             <label for="validationDefault06">Consultant</label>
-              <input name='consultant' type="text" class="form-control" id="validationDefault03" placeholder="Consultant" required/>
+              <input name='consultant' type="text" class="form-control" id="validationDefault03" placeholder="Consultant" />
             </div>
             <div class="form-group col-md-6">
               <label for="validationDefault05">Age</label>
-              <input name='age' class="form-control" id="inputEmail4" placeholder="age" type="number" required>
+              <input name='age' class="form-control" id="inputEmail4" placeholder="age" type="number" >
             </div>
           </div>
          
           <div class="form-row">
             <div class="col">
             <label for="validationDefault06">Cash/Insurance</label>
-              <input name='cash_insurance' type="text" class="form-control" id="validationDefault03" placeholder="" required/>
+              <input name='cash_insurance' type="text" class="form-control" id="validationDefault03" placeholder="" />
             </div>
             <div class="col">
               <label for="validationDefault06">Attender Number</label>
-              <input name='attender_no' type="number" class="form-control" id="validationDefault03" placeholder="912345678" required/>
+              <input name='attender_no' type="number" class="form-control" id="validationDefault03" placeholder="912345678" />
             </div>
             </div><br>
        
@@ -118,7 +118,7 @@ mysqli_close($con);
               </div>
               <div class="col-md-4 mb-3">
             <label for="validationDefault01">Date of Join</label>
-            <input name='date_of_join' type="date" class="form-control" id="validationDefault01" placeholder="Date" required>
+            <input name='date_of_join' type="date" class="form-control" id="validationDefault01" placeholder="Date" >
           </div>
             </div><br>
           
